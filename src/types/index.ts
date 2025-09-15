@@ -2,6 +2,8 @@ import type { Refund } from './Refund';
 import type { PaymentIntent } from './PaymentIntent';
 import type { Reader } from './Reader';
 import type { SetupIntent } from './SetupIntent';
+import type { StripeError } from './StripeError';
+export type { StripeError } from './StripeError';
 
 export * from './Reader';
 export * from './SetupIntent';
@@ -78,6 +80,10 @@ export type Cart = {
   lineItems: LineItem[];
 };
 
+/**
+ * @deprecated Use ErrorCode for cross-platform error handling.
+ * This enum is retained for backwards compatibility with example apps.
+ */
 export enum CommonError {
   Failed = 'Failed',
   Canceled = 'Canceled',
@@ -85,11 +91,6 @@ export enum CommonError {
 }
 
 export type LocationStatus = 'notSet' | 'set' | 'unknown';
-
-export type StripeError<T = CommonError> = {
-  code: T;
-  message: string;
-};
 
 export type InitializeResultType =
   | {
