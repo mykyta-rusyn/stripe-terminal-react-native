@@ -90,7 +90,10 @@
     "react-test-renderer": "19.0.0",
     "stripe": "^7.14.0",
     "typedoc": "^0.28.1",
-    "typescript": "5.0.4"
+    "typescript": "5.0.4",
+    "@testing-library/react-native": "^12.4.0",
+    "base-64": "^1.0.0",
+    "react-native-gradle-plugin": "^0.71.19"
   },
   "jest": {
     "preset": "react-native",
@@ -182,11 +185,6 @@
         }
       ]
     ]
-  },
-  "dependencies": {
-    "@testing-library/react-native": "^12.4.0",
-    "base-64": "^1.0.0",
-    "react-native-gradle-plugin": "^0.71.19"
   },
   "rnx-kit": {
     "kitType": "library",
